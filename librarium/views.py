@@ -5,9 +5,17 @@ from reportlab.lib.pagesizes import A4
 
 
 # Create your views here.
+def v_index(request): # esto es lo que se ve en la pantalla "librarium index"
+    return render(request, "librarium/index.html")
 
-def v_index(request):
-    return HttpResponse("Librarium index")
+def v_data_analitica(request):
+    return render(request, "librarium/data_analitica.html") ###########
+
+def v_data_frames(request):
+    return render(request, "librarium/data_frames.html") ###########
+
+def v_servicios(request):
+    return render(request, "librarium/servicios.html") ###########
 
 def v_reporte_pdf(request): #<----- View
     # Crear la respuesta HTTP con el tipo de contenido para PDF

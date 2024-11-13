@@ -1,14 +1,12 @@
-from django.shortcuts import render
 from django.http import HttpResponse
-from datetime import datetime
-from openpyxl import workbook
-
+from django.shortcuts import render
+import datetime
+from openpyxl import Workbook
 
 # Create your views here.
 def v_index(request):
-        return HttpResponse("sheetmarker index")
+    return HttpResponse("Sheetmarker index")
 
-        
 def v_reporte_xls(request):
     # Crear un libro de Excel
     workbook = Workbook()
@@ -37,5 +35,4 @@ def v_reporte_xls(request):
 
     # Guardar el libro en la respuesta
     workbook.save(response)
-
     return response

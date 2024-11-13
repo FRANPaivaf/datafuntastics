@@ -1,12 +1,16 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import render
 import matplotlib.pyplot as plt 
 from io import BytesIO
 # Create your views here.
-
-
 def v_index(request):
-    return HttpResponse("Librarium index")
+    predicion = "Incremento de 5% en ventas"
+    return render(request, "graphify/index.html", {
+        "axis_x": "Productos de invierno",
+        "axis_y": "Cantidad",
+        "logo": "https://img.freepik.com/premium-vector/analytic-graph-logo-vector-icon-illustration_12860-119.jpg",
+        "predicion": predicion
+    })
 
 def v_reporte_png(request):
     # Datos para el gráfico (puedes adaptarlos según tus necesidades)
