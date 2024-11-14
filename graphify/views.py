@@ -12,6 +12,13 @@ def v_index(request):
         "predicion": predicion
     })
 
+def v_lista_reportes(request):
+    return render(request, "graphify/lista_reportes.html")
+
+def v_lista_imagenes(request):
+    return render(request, "graphify/lista_imagenes.html")
+
+
 def v_reporte_png(request):
     # Datos para el gráfico (puedes adaptarlos según tus necesidades)
     labels = ['Category A', 'Category B', 'Category C']
