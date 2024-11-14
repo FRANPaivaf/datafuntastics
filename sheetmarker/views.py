@@ -5,7 +5,16 @@ from openpyxl import Workbook
 
 # Create your views here.
 def v_index(request):
-    return HttpResponse("Sheetmarker index")
+    return HttpResponse("sheetmarker index")
+
+def v_macros(request):
+    return render(request, "sheetmarker/macros.html")
+
+def v_powerbi(request):
+    return render(request, "sheetmarker/powerbi.html")
+
+def v_analitica(request):
+    return render(request, "sheetmarker/analitica.html")
 
 def v_reporte_xls(request):
     # Crear un libro de Excel
