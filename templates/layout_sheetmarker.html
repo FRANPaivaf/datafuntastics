@@ -60,19 +60,25 @@
         </div>
     </nav>
 
-  	<!--------------- CONTENIDO DINAMICO  -------------------->
+<!--------------- CONTENIDO DINAMICO  -------------------->
 {% block espacio1 %}
 {% endblock %}
     <!-- Footer -->
     <footer class="text-center py-4">
         <div class="container">
             <p>&copy; 2024 Nuestra Empresa. Todos los derechos reservados.</p>
-            <p>Dirección: Av. Principal 123, Santiago, Chile. Tel: +xx xx xxx</p>
+            <p>Dirección: {{ static_values.direccion }}, Santiago, Chile. Tel:  {{ static_values.telefono }}</p>
+            <p>Contactanos al correo: {{ static_values.email }}</p>
+            <p> Escribenos al Whatsapp: <a href="https://wa.me/{{ static_values.whatsapp }}">
+                <img src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo-whatsapp-512.png" width="16"></a> 
+            </p>
+            <p>Sigue nuestras novedades en instagram <a href="https://www.instagram.com/natgeoanimals/">
+                <img src="https://cdn1.iconfinder.com/data/icons/2019-social-media/512/social_media-04-256.png" width="20">
+            </a></p>
             <p>Ofrecemos servicios de consultoría en análisis de datos, desarrollo de aplicaciones y más.</p>
         </div>
     </footer>
-  
-  	<!--------------- CONTENIDO DINAMICO  -------------------->
+<!--------------- CONTENIDO DINAMICO  -------------------->
 {% block espacio2 %}
  {% endblock %}
 
