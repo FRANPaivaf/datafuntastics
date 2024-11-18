@@ -7,6 +7,26 @@
         <h5 class="card-title">Reportes Generales</h5>
         <p class="card-text">Obten reportes detallados para análisis en profundidad.</p>
         <button class="btn btn-primary">Ver más</button>
+   
+      <!--   <div>
+          {% for promo in promos %}
+          <div class="{{ promo.color }}">{{ promo.title}} |
+            {{promo.color}}</div>
+            {% endfor %}
+        </div>
+      </div> -->
+      <div>
+        {% for promo in promos %}
+        <div class="{{ promo.color }}">
+          {{ promo.title|upper}} 
+          <ul>
+            {% for rule in promo.rules %}
+            <li>{{ rules|truncatechars:3 }}</li>
+          {% endfor %}
+        </ul>
+          </div>
+          {% endfor %}
+      </div>
     </div>
 </div>
 {% endblock %}

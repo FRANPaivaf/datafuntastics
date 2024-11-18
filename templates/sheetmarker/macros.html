@@ -7,7 +7,23 @@
         <h5 class="card-title">Macros al dia</h5>
         <p class="card-text">Exporta datos en Macros para mantener la calidad y profesionalismo.</p>
         <button class="btn btn-primary">Ver más</button>
-    </div>
+
+        <ul>
+          {% for feat in features %}
+          <li>{{ feat }}</li>
+          {% endfor %}
+           <!--
+          <li>{{ feat1 }}</li>
+          <li>{{ feat2 }}</li>
+          <li>{{ feat3 }}</li>
+          
+        <ul>
+          {% for feat in features %}
+          <li>{{ feat }}</li><style> ul {list-style: none;}</style>
+          {% endfor %}
+        </ul>-->
+        
+        </ul>
 </div>
 {% endblock %}
 
